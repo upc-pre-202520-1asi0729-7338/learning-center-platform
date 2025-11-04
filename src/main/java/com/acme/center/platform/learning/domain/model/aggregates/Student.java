@@ -33,6 +33,16 @@ public class Student extends AuditableAbstractAggregateRoot<Student> {
         this.profileId = new ProfileId(profileId);
     }
 
+    /**
+     * Constructor with profile id
+     * @param profileId the profile id
+     *                  @see ProfileId
+     */
+    public Student(ProfileId profileId) {
+        this();
+        this.profileId = profileId;
+    }
+
     public void updateMetricsOnTutorialCompleted() {
         this.performanceMetricSet = this.performanceMetricSet.incrementCompletedTutorials();
     }
