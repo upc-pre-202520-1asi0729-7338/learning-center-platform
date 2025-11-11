@@ -11,6 +11,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing
 @SpringBootApplication
 public class LearningCenterPlatformApplication {
+    /**
+     * Default constructor.
+     */
+    public LearningCenterPlatformApplication() {
+        // Default constructor for Spring Boot
+    }
 
     /**
      * The main method that starts the Spring Boot application.
