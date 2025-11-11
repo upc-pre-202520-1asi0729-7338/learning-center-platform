@@ -11,8 +11,22 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * OpenAPI configuration for the Learning Center Platform.
+ * <p>
+ * This configuration sets up the OpenAPI documentation for the application,
+ * including info, external docs, and security schemes.
+ * </p>
+ */
 @Configuration
 public class OpenApiConfiguration {
+    /**
+     * Default constructor.
+     */
+    public OpenApiConfiguration() {
+        // Default constructor for Spring
+    }
+
     // Properties
     @Value("${spring.application.name}")
     String applicationName;
@@ -25,6 +39,14 @@ public class OpenApiConfiguration {
 
     // Methods
 
+    /**
+     * Creates the OpenAPI configuration bean for the Learning Center Platform.
+     * <p>
+     * This method configures the OpenAPI spec with application info, external documentation,
+     * and JWT bearer authentication.
+     * </p>
+     * @return the configured OpenAPI instance
+     */
     @Bean
     public OpenAPI learningPlatformOpenApi() {
 
@@ -42,7 +64,19 @@ public class OpenApiConfiguration {
                         .description("ACME Learning Platform wiki Documentation")
                         .url("https://acme-learning-platform.wiki.github.io/docs"));
 
+        // Add a security scheme
 
+        final String securitySchemeName = "bearerAuth";
+
+        openApi.addSecurityItem(new SecurityRequirement()
+                        .addList(securitySchemeName))
+                .components(new Components()
+                        .addSecuritySchemes(securitySchemeName,
+                                new SecurityScheme()
+                                        .name(securitySchemeName)
+                                        .type(SecurityScheme.Type.HTTP)
+                                        .scheme("bearer")
+                                        .bearerFormat("JWT")));
 
         // Return the OpenAPI configuration object with all the settings
 
