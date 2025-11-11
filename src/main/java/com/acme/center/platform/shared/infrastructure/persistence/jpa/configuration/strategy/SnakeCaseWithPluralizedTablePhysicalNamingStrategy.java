@@ -17,6 +17,13 @@ import static io.github.encryptorcode.pluralize.Pluralize.pluralize;
  */
 public class SnakeCaseWithPluralizedTablePhysicalNamingStrategy implements PhysicalNamingStrategy {
     /**
+     * Default constructor.
+     */
+    public SnakeCaseWithPluralizedTablePhysicalNamingStrategy() {
+        // Default constructor
+    }
+
+    /**
      * Converts the logical catalog name to its physical representation in snake_case.
      *
      * @param identifier the logical identifier
