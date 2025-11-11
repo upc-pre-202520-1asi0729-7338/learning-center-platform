@@ -2,6 +2,7 @@ package com.acme.center.platform.learning.domain.model.queries;
 
 /**
  * Query to get an enrollment by its id.
+ * @param enrollmentId the enrollment ID
  */
 public record GetEnrollmentByIdQuery(Long enrollmentId) {
     /**

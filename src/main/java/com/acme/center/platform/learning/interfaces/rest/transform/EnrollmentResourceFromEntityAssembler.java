@@ -8,6 +8,13 @@ import com.acme.center.platform.learning.interfaces.rest.resources.EnrollmentRes
  */
 public class EnrollmentResourceFromEntityAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private EnrollmentResourceFromEntityAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts an Enrollment entity to an EnrollmentResource.
      *
      * @param entity The {@link Enrollment} entity to convert.

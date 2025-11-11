@@ -8,10 +8,11 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 
 /**
- * LearningPathItem entity
- * @summary
+ * LearningPathItem entity.
+ * <p>
  * This entity represents a learning path item.
  * A learning path item is a course with a tutorialId and a reference to the next item in the learning path.
+ * </p>
  * @see Course
  * @see TutorialId
  * @since 1.0
@@ -33,12 +34,21 @@ public class LearningPathItem extends AuditableModel {
     @JoinColumn(name = "next_item_id")
     private LearningPathItem nextItem;
 
+    /**
+     * Constructor with course, tutorial ID, and next item.
+     * @param course the course
+     * @param tutorialId the tutorial ID
+     * @param nextItem the next item
+     */
     public LearningPathItem(Course course, TutorialId tutorialId, LearningPathItem nextItem) {
         this.course = course;
         this.tutorialId = tutorialId;
         this.nextItem = nextItem;
     }
 
+    /**
+     * Default constructor.
+     */
     public LearningPathItem() {
         this.tutorialId = new TutorialId(0L);
         this.nextItem = null;

@@ -4,6 +4,7 @@ import com.acme.center.platform.learning.domain.model.valueobjects.ProfileId;
 
 /**
  * Query to get student by profile id
+ * @param profileId the profile ID
  */
 public record GetStudentByProfileIdQuery(ProfileId profileId) {
     /**

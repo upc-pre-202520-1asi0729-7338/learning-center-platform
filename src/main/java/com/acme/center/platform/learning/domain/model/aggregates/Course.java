@@ -9,6 +9,13 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import org.apache.logging.log4j.util.Strings;
 
+/**
+ * Course aggregate root.
+ * <p>
+ * This class represents a course in the learning platform, including its title, description,
+ * and associated learning path.
+ * </p>
+ */
 @Getter
 @Entity
 public class Course extends AuditableAbstractAggregateRoot<Course> {
@@ -18,7 +25,8 @@ public class Course extends AuditableAbstractAggregateRoot<Course> {
     private final LearningPath learningPath;
 
     /**
-     * Create a new course
+     * Default constructor for JPA.
+     * Initializes the course with empty title and description, and a new learning path.
      */
     public Course() {
         this.title = Strings.EMPTY;
@@ -27,9 +35,10 @@ public class Course extends AuditableAbstractAggregateRoot<Course> {
     }
 
     /**
-     * Create a new course with the given title and description
+     * Updates the course information with the given title and description.
      * @param title The title of the course
      * @param description The description of the course
+     * @return this course instance
      */
     public Course updateInformation(String title, String description) {
         this.title = title;

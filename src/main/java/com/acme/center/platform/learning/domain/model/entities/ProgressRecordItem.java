@@ -17,10 +17,11 @@ import java.util.Objects;
 
 /**
  * Represents a record of a student's progress on a tutorial of the learning path for a course.
- * @summary
+ * <p>
  * This entity represents a record of a student's progress in a tutorial.
  * It contains information about the student's enrollment, the tutorial being tracked, the status of the progress,
  * and the dates when the progress was started and completed.
+ * </p>
  * @see AuditableModel
  * @since 1.0
  */
@@ -79,6 +80,7 @@ public class ProgressRecordItem extends AuditableModel {
 
     /**
      * Verifies if the progress is completed.
+     * @return true if the status is COMPLETED, false otherwise
      * @see ProgressStatus
      */
     public boolean isCompleted() {
@@ -87,6 +89,7 @@ public class ProgressRecordItem extends AuditableModel {
 
     /**
      * Verifies if the progress is in progress (started).
+     * @return true if the status is STARTED, false otherwise
      * @see ProgressStatus
      */
     public boolean isInProgress() {
@@ -95,6 +98,7 @@ public class ProgressRecordItem extends AuditableModel {
 
     /**
      * Verifies if the progress has not started.
+     * @return true if the status is NOT_STARTED, false otherwise
      * @see ProgressStatus
      */
     public boolean isNotStarted() {
@@ -103,10 +107,11 @@ public class ProgressRecordItem extends AuditableModel {
 
     /**
      * Calculates the number of days elapsed since the progress on the learning path item was started.
-     * @summary
+     * <p>
      * This method calculates the number of days elapsed since the learning path item was started by the enrolled student.
      * If there is no progress yet, the method returns 0.
      * If the item is completed, the method returns the number of days between the start and completion dates.
+     * </p>
      * @return The number of days elapsed since the progress was started, or 0 if there is no progress on the item.
      */
     public long calculateDaysElapsed() {

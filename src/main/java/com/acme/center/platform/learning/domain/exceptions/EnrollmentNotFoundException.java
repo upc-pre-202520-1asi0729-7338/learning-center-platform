@@ -2,8 +2,9 @@ package com.acme.center.platform.learning.domain.exceptions;
 
 /**
  * Exception thrown when an enrollment is not found.
- * @summary
+ * <p>
  * This exception is thrown when an enrollment is not found in the database.
+ * </p>
  * @see RuntimeException
  */
 public class EnrollmentNotFoundException extends RuntimeException {

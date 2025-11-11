@@ -4,6 +4,8 @@ import com.acme.center.platform.learning.domain.model.valueobjects.TutorialId;
 
 /**
  * Query to get a learning path item by course id and tutorial id.
+ * @param courseId the course ID
+ * @param tutorialId the tutorial ID
  */
 public record GetLearningPathItemByCourseIdAndTutorialIdQuery(Long courseId, TutorialId tutorialId) {
     /**

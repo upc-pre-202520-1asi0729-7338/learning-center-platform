@@ -8,6 +8,13 @@ import com.acme.center.platform.learning.interfaces.rest.resources.CreateStudent
  */
 public class CreateStudentCommandFromResourceAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private CreateStudentCommandFromResourceAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts a CreateStudentResource to a CreateStudentCommand.
      *
      * @param resource The {@link CreateStudentResource} resource to convert.

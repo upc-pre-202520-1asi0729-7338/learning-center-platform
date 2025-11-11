@@ -2,6 +2,8 @@ package com.acme.center.platform.learning.interfaces.rest.resources;
 
 /**
  * Update course resource.
+ * @param title the title of the course
+ * @param description the description of the course
  */
 public record UpdateCourseResource(String title, String description) {
     /**

@@ -4,6 +4,7 @@ import com.acme.center.platform.learning.domain.model.valueobjects.AcmeStudentRe
 
 /**
  * Query to get student by Acme student record id
+ * @param studentRecordId the Acme student record ID
  */
 public record GetStudentByAcmeStudentRecordIdQuery(AcmeStudentRecordId studentRecordId) {
     /**

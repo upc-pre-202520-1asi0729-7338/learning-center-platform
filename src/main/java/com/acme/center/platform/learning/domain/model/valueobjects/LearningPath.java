@@ -11,10 +11,11 @@ import java.util.Objects;
 import java.util.function.Predicate;
 
 /**
- * LearningPath value object
- *
- * @summary This value object represents a learning path.
+ * LearningPath value object.
+ * <p>
+ * This value object represents a learning path.
  * A learning path is a list of learning path items.
+ * </p>
  * @see LearningPathItem
  * @since 1.0
  */
@@ -24,9 +25,10 @@ public class LearningPath {
     private List<LearningPathItem> learningPathItems;
 
     /**
-     * Default constructor
-     * @summary
-     * Initialize the learning path with an empty list of learning path items
+     * Default constructor.
+     * <p>
+     * Initialize the learning path with an empty list of learning path items.
+     * </p>
      */
     public LearningPath() {
         this.learningPathItems = List.of();

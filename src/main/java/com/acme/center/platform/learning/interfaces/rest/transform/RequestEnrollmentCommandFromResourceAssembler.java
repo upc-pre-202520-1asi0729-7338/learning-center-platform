@@ -9,6 +9,13 @@ import com.acme.center.platform.learning.interfaces.rest.resources.RequestEnroll
  */
 public class RequestEnrollmentCommandFromResourceAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private RequestEnrollmentCommandFromResourceAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts a RequestEnrollmentResource to a RequestEnrollmentCommand.
      *
      * @param resource The {@link RequestEnrollmentResource} resource to convert.

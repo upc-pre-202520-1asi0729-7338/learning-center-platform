@@ -10,7 +10,9 @@ import org.springframework.context.ApplicationEvent;
  */
 @Getter
 public class TutorialCompletedEvent extends ApplicationEvent {
+    /** The enrollment ID. */
     private final Long enrollmentId;
+    /** The tutorial ID. */
     private final TutorialId tutorialId;
     /**
      * TutorialCompletedEvent Constructor

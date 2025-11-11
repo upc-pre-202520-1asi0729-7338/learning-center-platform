@@ -24,7 +24,7 @@ public class ExternalProfileService {
 
     /**
      * Fetch Profile By Email
-     * @param email
+     * @param email the email address
      * @return An {@link Optional} of {@link ProfileId}
      */
     public Optional<ProfileId> fetchProfileByEmail(String email) {
@@ -34,14 +34,14 @@ public class ExternalProfileService {
 
     /**
      * Create Profile
-     * @param firstName
-     * @param lastName
-     * @param email
-     * @param street
-     * @param number
-     * @param city
-     * @param postalCode
-     * @param country
+     * @param firstName the first name
+     * @param lastName the last name
+     * @param email the email address
+     * @param street the street
+     * @param number the number
+     * @param city the city
+     * @param postalCode the postal code
+     * @param country the country
      * @return An {@link Optional} of {@link ProfileId}
      */
     public Optional<ProfileId> createProfile(

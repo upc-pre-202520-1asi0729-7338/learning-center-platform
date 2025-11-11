@@ -8,6 +8,13 @@ import com.acme.center.platform.learning.interfaces.rest.resources.LearningPathI
  */
 public class LearningPathItemResourceFromEntityAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private LearningPathItemResourceFromEntityAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts a LearningPathItem entity to a LearningPathItemResource.
      *
      * @param entity The {@link LearningPathItem} entity to convert.

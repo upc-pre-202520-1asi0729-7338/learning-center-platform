@@ -16,7 +16,7 @@ public interface StudentQueryService {
      * handle
      * This method is used to handle the GetEnrollmentByAcmeStudentRecordIdAndCourseIdQuery.
      * @param query the GetStudentByProfileIdQuery containing the student record id and profile id.
-     * @return Optional<Student> containing the student for the given profile id.
+     * @return the student for the given profile id.
      * @see GetStudentByProfileIdQuery
      */
     Optional<Student> handle(GetStudentByProfileIdQuery query);
@@ -24,7 +24,7 @@ public interface StudentQueryService {
      * handle
      * This method is used to handle the GetEnrollmentByAcmeStudentRecordIdAndCourseIdQuery.
      * @param query the GetStudentByAcmeStudentRecordIdQuery containing the student record id.
-     * @return Optional<Student> containing the student for the given record id.
+     * @return the student for the given record id.
      * @see GetStudentByAcmeStudentRecordIdQuery
      */
     Optional<Student> handle(GetStudentByAcmeStudentRecordIdQuery query);

@@ -21,7 +21,11 @@ public class StudentCommandServiceImpl implements StudentCommandService {
     private final StudentRepository studentRepository;
     private final ExternalProfileService externalProfileService;
 
-    // inherit javadoc
+    /**
+     * Constructor for StudentCommandServiceImpl.
+     * @param studentRepository the student repository
+     * @param externalProfileService the external profile service
+     */
     public StudentCommandServiceImpl(StudentRepository studentRepository, ExternalProfileService externalProfileService) {
         this.studentRepository = studentRepository;
         this.externalProfileService = externalProfileService;

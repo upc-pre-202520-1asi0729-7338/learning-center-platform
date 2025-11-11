@@ -8,6 +8,13 @@ import com.acme.center.platform.learning.interfaces.rest.resources.UpdateCourseR
  */
 public class UpdateCourseCommandFromResourceAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private UpdateCourseCommandFromResourceAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts a UpdateCourseResource to a UpdateCourseCommand.
      *
      * @param courseId The course ID.

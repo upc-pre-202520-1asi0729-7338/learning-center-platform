@@ -44,6 +44,7 @@ public class StudentEnrollmentsController {
      * Constructor
      *
      * @param enrollmentQueryService The {@link EnrollmentQueryService} service
+     * @param studentQueryService The {@link StudentQueryService} service
      */
     public StudentEnrollmentsController(EnrollmentQueryService enrollmentQueryService, StudentQueryService studentQueryService) {
         this.enrollmentQueryService = enrollmentQueryService;

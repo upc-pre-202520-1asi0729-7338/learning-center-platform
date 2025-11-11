@@ -2,8 +2,9 @@ package com.acme.center.platform.learning.domain.exceptions;
 
 /**
  * Exception thrown when a course is not found.
- * @summary
+ * <p>
  * This exception is thrown when a course is not found in the database.
+ * </p>
  * @see RuntimeException
  */
 public class CourseNotFoundException extends RuntimeException {

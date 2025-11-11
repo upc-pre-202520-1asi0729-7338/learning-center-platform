@@ -2,6 +2,14 @@ package com.acme.center.platform.learning.interfaces.rest.resources;
 
 /**
  * Create student resource.
+ * @param firstName the first name
+ * @param lastName the last name
+ * @param email the email
+ * @param street the street
+ * @param number the number
+ * @param city the city
+ * @param postalCode the postal code
+ * @param country the country
  */
 public record CreateStudentResource(
         String firstName,

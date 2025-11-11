@@ -6,10 +6,11 @@ import java.util.UUID;
 
 /**
  * Student record id value object.
- * @summary
+ * <p>
  * The class is a value object in the Learning bounded context.
  * It is an embeddable object containing a unique identifier for students in ACME Learning Center Platform.
  * It throws an {@link IllegalArgumentException} if the student record id is null or blank.
+ * </p>
  * @param studentRecordId The unique identifier for the student record. It cannot be null or blank.
  * @see IllegalArgumentException
  * @since 1.0.0

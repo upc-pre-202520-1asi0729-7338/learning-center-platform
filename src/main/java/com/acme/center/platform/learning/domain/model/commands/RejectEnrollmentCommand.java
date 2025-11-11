@@ -2,6 +2,7 @@ package com.acme.center.platform.learning.domain.model.commands;
 
 /**
  * Command to reject an enrollment
+ * @param enrollmentId the enrollment ID
  */
 public record RejectEnrollmentCommand(Long enrollmentId) {
     /**

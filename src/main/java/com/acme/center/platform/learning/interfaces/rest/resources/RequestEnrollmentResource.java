@@ -2,6 +2,8 @@ package com.acme.center.platform.learning.interfaces.rest.resources;
 
 /**
  * Request enrollment resource.
+ * @param studentRecordId the student record ID
+ * @param courseId the course ID
  */
 public record RequestEnrollmentResource(String studentRecordId, Long courseId) {
     /**
