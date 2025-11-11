@@ -8,6 +8,13 @@ import com.acme.center.platform.profiles.interfaces.rest.resources.ProfileResour
  */
 public class ProfileResourceFromEntityAssembler {
     /**
+     * Private constructor to prevent instantiation.
+     */
+    private ProfileResourceFromEntityAssembler() {
+        // Utility class
+    }
+
+    /**
      * Converts a Profile entity to a ProfileResource.
      * @param entity The {@link Profile} entity to convert.
      * @return The {@link ProfileResource} resource.

@@ -2,6 +2,14 @@ package com.acme.center.platform.profiles.interfaces.rest.resources;
 
 /**
  * Resource for creating a profile.
+ * @param firstName the first name
+ * @param lastName the last name
+ * @param email the email
+ * @param street the street
+ * @param number the number
+ * @param city the city
+ * @param postalCode the postal code
+ * @param country the country
  */
 public record CreateProfileResource(
         String firstName,

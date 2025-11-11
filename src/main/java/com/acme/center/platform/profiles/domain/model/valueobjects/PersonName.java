@@ -2,6 +2,8 @@ package com.acme.center.platform.profiles.domain.model.valueobjects;
 
 /**
  * PersonName Value Object
+ * @param firstName the first name
+ * @param lastName the last name
  */
 public record PersonName(String firstName, String lastName) {
     /**

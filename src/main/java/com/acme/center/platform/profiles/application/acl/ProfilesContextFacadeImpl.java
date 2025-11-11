@@ -13,11 +13,28 @@ public class ProfilesContextFacadeImpl implements ProfilesContextFacade {
     private final ProfileCommandService profileCommandService;
     private final ProfileQueryService profileQueryService;
 
+    /**
+     * Constructor for ProfilesContextFacadeImpl.
+     * @param profileCommandService the profile command service
+     * @param profileQueryService the profile query service
+     */
     public ProfilesContextFacadeImpl(ProfileCommandService profileCommandService, ProfileQueryService profileQueryService) {
         this.profileCommandService = profileCommandService;
         this.profileQueryService = profileQueryService;
     }
 
+    /**
+     * Creates a new profile with the given details.
+     * @param firstName the first name
+     * @param lastName the last name
+     * @param email the email address
+     * @param street the street address
+     * @param number the street number
+     * @param city the city
+     * @param postalCode the postal code
+     * @param country the country
+     * @return the ID of the created profile, or 0 if creation failed
+     */
     public Long createProfile(
             String firstName,
             String lastName,
@@ -40,6 +57,11 @@ public class ProfilesContextFacadeImpl implements ProfilesContextFacade {
         return profile.isEmpty() ? Long.valueOf(0L) : profile.get().getId();
     }
 
+    /**
+     * Fetches the profile ID by email address.
+     * @param email the email address
+     * @return the profile ID, or 0 if not found
+     */
     public Long fetchProfileIdByEmail(String email) {
         var getProfileByEmailQuery = new GetProfileByEmailQuery(new EmailAddress(email));
         var profile = profileQueryService.handle(getProfileByEmailQuery);

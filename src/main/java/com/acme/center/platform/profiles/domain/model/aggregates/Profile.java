@@ -8,7 +8,11 @@ import com.acme.center.platform.shared.domain.model.aggregates.AuditableAbstract
 import jakarta.persistence.*;
 
 /**
- * Profile Aggregate Root
+ * Profile aggregate root.
+ * <p>
+ * This class represents a user profile in the system, containing personal information
+ * such as name, email, and address.
+ * </p>
  */
 @Entity
 public class Profile extends AuditableAbstractAggregateRoot<Profile> {

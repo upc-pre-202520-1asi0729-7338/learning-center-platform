@@ -21,6 +21,9 @@ import java.util.List;
 
 /**
  * ProfilesController
+ * <p>
+ * REST controller for managing profiles, providing endpoints for creating, retrieving, and listing profiles.
+ * </p>
  */
 @RestController
 @RequestMapping(value = "/api/v1/profiles", produces = MediaType.APPLICATION_JSON_VALUE)
