@@ -11,9 +11,10 @@ import java.time.LocalDateTime;
 
 /**
  * Base class for aggregate roots that need to be audited.
- * @param <T> The concrete type of the aggregate root.
- * @summary
+ * <p>
  * The class is an abstract class that extends the {@link AbstractAggregateRoot} class.
+ * </p>
+ * @param <T> The concrete type of the aggregate root.
  */
 @Getter
 @EntityListeners(AuditingEntityListener.class)
